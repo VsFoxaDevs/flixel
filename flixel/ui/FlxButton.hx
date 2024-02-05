@@ -389,7 +389,7 @@ class FlxTypedButton<T:FlxSprite> extends FlxSprite implements IFlxInput
 		if (!overlapFound)
 			overlapFound = checkTouchOverlap();
 
-		if (currentInput != null && currentInput.justReleased)
+		if (currentInput != null && currentInput.justReleased && input.pressed)
 		{
 			onUpHandler();
 		}
