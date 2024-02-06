@@ -464,16 +464,26 @@ class FlxTypedButton<T:FlxSprite> extends FlxSprite implements IFlxInput
 			currentInput = input;
 			onDownHandler();
 		}
-		else if (status == FlxButton.NORMAL)
+		else
 		{
-			// Allow "swiping" to press a button (dragging it over the button while pressed)
-			if (allowSwiping && input.pressed)
+			if (status == FlxButton.NORMAL)
 			{
-				onDownHandler();
+				// Allow "swiping" to press a button (dragging it over the button while pressed)
+				if (allowSwiping && input.pressed)
+				{
+					onDownHandler();
+				}
+				else
+				{
+					onOverHandler();
+				}
 			}
 			else
 			{
-				onOverHandler();
+				if(input.justReleased && status == FlxButton.PRESSED)
+				{
+					onUpHandler();
+				}
 			}
 		}
 	}
