@@ -31,6 +31,7 @@ import flixel.animation.FlxAnimationController;
 import flixel.input.touch.FlxTouch;
 #end
 #end
+
 import flixel.util.FlxStringUtil;
 
 class Tracker extends Watch

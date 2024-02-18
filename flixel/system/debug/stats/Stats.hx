@@ -1,5 +1,6 @@
 package flixel.system.debug.stats;
 
+#if FLX_DEBUG
 import openfl.display.BitmapData;
 import openfl.system.System;
 import openfl.text.TextField;
@@ -24,7 +25,6 @@ private class GraphicMaximizeButton extends BitmapData {}
  * @author Adam "Atomic" Saltsman
  * @author Anton Karlov
  */
-#if FLX_DEBUG
 class Stats extends Window
 {
 	/**
