@@ -119,6 +119,9 @@ class Console extends Window
 		{
 			if (FlxG.debugger.visible && FlxG.game.debugger.console.visible && e.keyCode == Keyboard.TAB)
 				FlxG.stage.focus = input;
+			#if windows
+			if (e.keyCode == Keyboard.TAB) e.preventDefault();
+			#end
 		});
 		#end
 		#end
