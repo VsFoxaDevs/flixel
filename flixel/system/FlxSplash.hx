@@ -79,7 +79,7 @@ class FlxSplash extends FlxState
 		var dtf = new TextFormat(FlxAssets.FONT_DEFAULT, 16, 0xffffff);
 		dtf.align = TextFormatAlign.CENTER;
 		_text.defaultTextFormat = dtf;
-		_text.text = "HaxeFlixel";
+		_text.text = "Flixel-Foxa";
 		FlxG.stage.addChild(_text);
 
 		onResize(stageWidth, stageHeight);
@@ -127,7 +127,7 @@ class FlxSplash extends FlxState
 	{
 		_functions[_curPart]();
 		_text.textColor = _colors[_curPart];
-		_text.text = "HaxeFlixel";
+		_text.text = "Flixel-Foxa";
 		_curPart++;
 
 		if (_curPart == 5)
